@@ -1,0 +1,1833 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AccurateLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Day"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InfoWeight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Minute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Month"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predicate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Second"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TendencyLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TendencyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Year"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#doByPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#doneByPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromPublisher"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAccurateLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDay"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExtra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHour"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInfoWeight"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMinute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMonth"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSecond"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTendencyLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTendencyType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasYear"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#binary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#00"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#01时21分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#02时40分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#03月08日"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#06时30分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#08"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#08日"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#08日00时21分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#08日00时41分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#09"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#09时25分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#10时25分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2014"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2014年"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2014年03月08日09时09分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2014年03月08日09时31分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2014年03月08日16时37分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2014年03月09日08时52分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#25"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#30"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#31"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#37"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#40"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#41"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#52"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MH370客机"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OtherPlatforms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SinaWeibo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#上空"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#下令"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#下午"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#不舒服"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#中国"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#中国民航"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#之后"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#乘客"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#人力"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#以南"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#任务"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#信号"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#信息"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#值班"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#力量"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#办公厅"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#北京"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#协助"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#南部"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#印尼"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#印度尼西亚"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#原定"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#发现"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#发言人"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#司令部"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#吉隆坡"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#吉隆坡国际机场"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#吉隆坡飞往北京客机在胡志明管制区失去联系"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#同一天"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#国家"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#国家民航总局核实失联飞机上有158名中国人"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#国防部"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#国际"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#国际在线"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#坚强"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#坠落"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#外交部"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#失联海域"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#委员会"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#媒体"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#客机"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#家属"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#岛"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#巡逻机"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#工作"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#希沙姆丁·敦·侯赛因"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#平安"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#幸福"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#应急"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#建议"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#当天"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#快讯"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#恐怖"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#恐慌"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#悲伤"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#意外"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#慰问"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#抵达"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#指导"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#指挥"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#揪心"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#搜寻"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#搜救飞机"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#搜索"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#救护"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#救援"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#救难"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#救难中心"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#新加坡"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#新华社"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#新华网"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#新闻发布会"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#无常"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#时间"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#机上"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#柳青"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#民航局"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#民航总局"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#沉重"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#油污"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#油污带"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#泰国"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#海上"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#海事"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#海军"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#海警"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#消息"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#焦急"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#理解"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#着急"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#空军"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#空管"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#空管情报区"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#纳隆"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#美国"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#联络"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#胡志明管制区"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#脆弱"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#航海"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#航班"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#船"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#船只"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#苏邦空中交通控制中心"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#菲律宾"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#西南"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#记者"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#负责人"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#越南"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#越南民航"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#越南航空"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#越南飞机发现两片油污带_或与失联客机有关(图)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#越方"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#边防"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#通知"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#通讯"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#部队"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#附近"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#难过"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#雷达"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#飞机"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#飞行管理总公司"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#马来"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#马来西亚"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#马来西亚政府"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#马来西亚联系中国等多国参与搜救失联马航客机"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#马来西亚航空公司"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#马航"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#黎海平"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTendencyLevel"/>
+            <Class IRI="#TendencyLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTendencyType"/>
+            <Class IRI="#TendencyType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#doByPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#doneByPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromPlatform"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromPublisher"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromTime"/>
+            <Class IRI="#Time"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDescription"/>
+            <Class IRI="#Description"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEntity"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasExtra"/>
+            <Class IRI="#Extra"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasLocation"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTime"/>
+            <Class IRI="#Time"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Extra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccurateLevel"/>
+            <Class IRI="#AccurateLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predicate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccurateLevel"/>
+            <Class IRI="#AccurateLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDay"/>
+            <Class IRI="#Day"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHour"/>
+            <Class IRI="#Hour"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMinute"/>
+            <Class IRI="#Minute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMonth"/>
+            <Class IRI="#Month"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSecond"/>
+            <Class IRI="#Second"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasYear"/>
+            <Class IRI="#Year"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Hour"/>
+        <NamedIndividual IRI="#00"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hour"/>
+        <NamedIndividual IRI="#01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#01时21分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hour"/>
+        <NamedIndividual IRI="#02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#02时40分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Day"/>
+        <NamedIndividual IRI="#03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Month"/>
+        <NamedIndividual IRI="#03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#03月08日"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hour"/>
+        <NamedIndividual IRI="#06"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#06时30分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Day"/>
+        <NamedIndividual IRI="#08"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#08日"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#08日00时21分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#08日00时41分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hour"/>
+        <NamedIndividual IRI="#09"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#09"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#09时25分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AccurateLevel"/>
+        <NamedIndividual IRI="#1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hour"/>
+        <NamedIndividual IRI="#10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#10时25分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hour"/>
+        <NamedIndividual IRI="#16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AccurateLevel"/>
+        <NamedIndividual IRI="#2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Year"/>
+        <NamedIndividual IRI="#2014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#2014年"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#2014年03月08日09时09分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#2014年03月08日09时31分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#2014年03月08日16时37分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#2014年03月09日08时52分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#25"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AccurateLevel"/>
+        <NamedIndividual IRI="#3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#30"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#37"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AccurateLevel"/>
+        <NamedIndividual IRI="#4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#40"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#41"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AccurateLevel"/>
+        <NamedIndividual IRI="#5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Minute"/>
+        <NamedIndividual IRI="#52"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AccurateLevel"/>
+        <NamedIndividual IRI="#6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#MH370客机"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#OtherPlatforms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#SinaWeibo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#上空"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#下令"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#下午"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#不舒服"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#中国"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#中国民航"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#之后"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#乘客"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#人力"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#以南"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#任务"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#信号"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#信息"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#值班"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#力量"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#办公厅"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#北京"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#协助"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#南部"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#印尼"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#印度尼西亚"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#原定"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#发现"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#发言人"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#司令部"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#吉隆坡"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#吉隆坡国际机场"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#吉隆坡飞往北京客机在胡志明管制区失去联系"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#同一天"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#国家"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#国家民航总局核实失联飞机上有158名中国人"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#国防部"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#国际"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#国际在线"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#坚强"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#坠落"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#外交部"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#失联海域"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#委员会"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#媒体"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#客机"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#家属"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#岛"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#巡逻机"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#工作"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#希沙姆丁·敦·侯赛因"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#平安"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#幸福"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#应急"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#建议"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#当天"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#快讯"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#恐怖"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#恐慌"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#悲伤"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#意外"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#慰问"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#慰问"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#抵达"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#指导"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#指挥"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#揪心"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#搜寻"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#搜救飞机"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#搜索"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#救护"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#救护"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#救援"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#救援"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#救难"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#救难中心"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#新加坡"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#新华社"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#新华网"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#新闻发布会"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#无常"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#时间"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#机上"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#柳青"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#民航局"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#民航总局"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#沉重"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#油污"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#油污带"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#泰国"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#海上"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#海事"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#海军"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#海警"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#消息"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#焦急"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#理解"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#着急"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#空军"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#空管"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#空管情报区"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#纳隆"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#美国"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#联络"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#联络"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#胡志明管制区"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#脆弱"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#航海"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#航班"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#船"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#船只"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#苏邦空中交通控制中心"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#菲律宾"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#西南"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#记者"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#负责人"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#越南"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#越南民航"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#越南航空"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#越南飞机发现两片油污带_或与失联客机有关(图)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#越方"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#边防"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#通知"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#通讯"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#部队"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#附近"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#难过"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#雷达"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#飞机"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#飞行管理总公司"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#马来"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#马来西亚"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#马来西亚政府"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#马来西亚联系中国等多国参与搜救失联马航客机"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#马来西亚航空公司"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#马航"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#黎海平"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#01时21分"/>
+        <NamedIndividual IRI="#01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#01时21分"/>
+        <NamedIndividual IRI="#21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#02时40分"/>
+        <NamedIndividual IRI="#02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#02时40分"/>
+        <NamedIndividual IRI="#40"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDay"/>
+        <NamedIndividual IRI="#03月08日"/>
+        <NamedIndividual IRI="#08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMonth"/>
+        <NamedIndividual IRI="#03月08日"/>
+        <NamedIndividual IRI="#03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#06时30分"/>
+        <NamedIndividual IRI="#06"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#06时30分"/>
+        <NamedIndividual IRI="#30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDay"/>
+        <NamedIndividual IRI="#08日"/>
+        <NamedIndividual IRI="#08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDay"/>
+        <NamedIndividual IRI="#08日00时21分"/>
+        <NamedIndividual IRI="#08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#08日00时21分"/>
+        <NamedIndividual IRI="#21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#08日00时21分"/>
+        <NamedIndividual IRI="#00"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDay"/>
+        <NamedIndividual IRI="#08日00时41分"/>
+        <NamedIndividual IRI="#08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#08日00时41分"/>
+        <NamedIndividual IRI="#00"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#08日00时41分"/>
+        <NamedIndividual IRI="#41"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#09时25分"/>
+        <NamedIndividual IRI="#09"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#09时25分"/>
+        <NamedIndividual IRI="#25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#10时25分"/>
+        <NamedIndividual IRI="#10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#10时25分"/>
+        <NamedIndividual IRI="#25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#2014年"/>
+        <NamedIndividual IRI="#2014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDay"/>
+        <NamedIndividual IRI="#2014年03月08日09时09分"/>
+        <NamedIndividual IRI="#08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#2014年03月08日09时09分"/>
+        <NamedIndividual IRI="#09"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#2014年03月08日09时09分"/>
+        <NamedIndividual IRI="#09"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMonth"/>
+        <NamedIndividual IRI="#2014年03月08日09时09分"/>
+        <NamedIndividual IRI="#03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#2014年03月08日09时09分"/>
+        <NamedIndividual IRI="#2014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDay"/>
+        <NamedIndividual IRI="#2014年03月08日09时31分"/>
+        <NamedIndividual IRI="#08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#2014年03月08日09时31分"/>
+        <NamedIndividual IRI="#09"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#2014年03月08日09时31分"/>
+        <NamedIndividual IRI="#31"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMonth"/>
+        <NamedIndividual IRI="#2014年03月08日09时31分"/>
+        <NamedIndividual IRI="#03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#2014年03月08日09时31分"/>
+        <NamedIndividual IRI="#2014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDay"/>
+        <NamedIndividual IRI="#2014年03月08日16时37分"/>
+        <NamedIndividual IRI="#08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#2014年03月08日16时37分"/>
+        <NamedIndividual IRI="#16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#2014年03月08日16时37分"/>
+        <NamedIndividual IRI="#37"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMonth"/>
+        <NamedIndividual IRI="#2014年03月08日16时37分"/>
+        <NamedIndividual IRI="#03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#2014年03月08日16时37分"/>
+        <NamedIndividual IRI="#2014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDay"/>
+        <NamedIndividual IRI="#2014年03月09日08时52分"/>
+        <NamedIndividual IRI="#09"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHour"/>
+        <NamedIndividual IRI="#2014年03月09日08时52分"/>
+        <NamedIndividual IRI="#08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMinute"/>
+        <NamedIndividual IRI="#2014年03月09日08时52分"/>
+        <NamedIndividual IRI="#52"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMonth"/>
+        <NamedIndividual IRI="#2014年03月09日08时52分"/>
+        <NamedIndividual IRI="#03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasYear"/>
+        <NamedIndividual IRI="#2014年03月09日08时52分"/>
+        <NamedIndividual IRI="#2014"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPlatform"/>
+        <NamedIndividual IRI="#吉隆坡飞往北京客机在胡志明管制区失去联系"/>
+        <NamedIndividual IRI="#OtherPlatforms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPublisher"/>
+        <NamedIndividual IRI="#吉隆坡飞往北京客机在胡志明管制区失去联系"/>
+        <NamedIndividual IRI="#新华网"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromTime"/>
+        <NamedIndividual IRI="#吉隆坡飞往北京客机在胡志明管制区失去联系"/>
+        <NamedIndividual IRI="#2014年03月08日09时09分"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPlatform"/>
+        <NamedIndividual IRI="#国家民航总局核实失联飞机上有158名中国人"/>
+        <NamedIndividual IRI="#OtherPlatforms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPublisher"/>
+        <NamedIndividual IRI="#国家民航总局核实失联飞机上有158名中国人"/>
+        <NamedIndividual IRI="#新华社"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromTime"/>
+        <NamedIndividual IRI="#国家民航总局核实失联飞机上有158名中国人"/>
+        <NamedIndividual IRI="#2014年03月08日09时31分"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPlatform"/>
+        <NamedIndividual IRI="#越南飞机发现两片油污带_或与失联客机有关(图)"/>
+        <NamedIndividual IRI="#OtherPlatforms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPublisher"/>
+        <NamedIndividual IRI="#越南飞机发现两片油污带_或与失联客机有关(图)"/>
+        <NamedIndividual IRI="#国际在线"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromTime"/>
+        <NamedIndividual IRI="#越南飞机发现两片油污带_或与失联客机有关(图)"/>
+        <NamedIndividual IRI="#2014年03月09日08时52分"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPlatform"/>
+        <NamedIndividual IRI="#马来西亚联系中国等多国参与搜救失联马航客机"/>
+        <NamedIndividual IRI="#OtherPlatforms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPublisher"/>
+        <NamedIndividual IRI="#马来西亚联系中国等多国参与搜救失联马航客机"/>
+        <NamedIndividual IRI="#新华网"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromTime"/>
+        <NamedIndividual IRI="#马来西亚联系中国等多国参与搜救失联马航客机"/>
+        <NamedIndividual IRI="#2014年03月08日16时37分"/>
+    </ObjectPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

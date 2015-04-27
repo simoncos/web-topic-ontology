@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AccurateLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Day"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InfoWeight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Minute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Month"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predicate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Second"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TendencyLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TendencyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Year"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#doByPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#doneByPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromPublisher"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAccurateLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDay"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExtra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHour"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInfoWeight"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMinute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMonth"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSecond"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTendencyLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTendencyType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasYear"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#binary"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTendencyLevel"/>
+            <Class IRI="#TendencyLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTendencyType"/>
+            <Class IRI="#TendencyType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#doByPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#doneByPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromPlatform"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromPublisher"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromTime"/>
+            <Class IRI="#Time"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDescription"/>
+            <Class IRI="#Description"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEntity"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasExtra"/>
+            <Class IRI="#Extra"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasLocation"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTime"/>
+            <Class IRI="#Time"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Extra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccurateLevel"/>
+            <Class IRI="#AccurateLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predicate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccurateLevel"/>
+            <Class IRI="#AccurateLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDay"/>
+            <Class IRI="#Day"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHour"/>
+            <Class IRI="#Hour"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInfoWeight"/>
+            <Class IRI="#InfoWeight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMinute"/>
+            <Class IRI="#Minute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMonth"/>
+            <Class IRI="#Month"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSecond"/>
+            <Class IRI="#Second"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasYear"/>
+            <Class IRI="#Year"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

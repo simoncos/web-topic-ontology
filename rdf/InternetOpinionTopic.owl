@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="#AccurateLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Extra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predicate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TendencyLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TendencyType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#doByPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#doneByPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromPublisher"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fromTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAccurateLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExtra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPredicate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTendencyLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTendencyType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#binary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2014年03月08日00时42分"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#上空"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#东方"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#事件"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#今晚"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#北京"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#发布"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#声明"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#失踪"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#安全"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#意外"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#新浪微博"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#知道"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#附近"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#飞机"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#马航"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#马航MH370事件"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTendencyLevel"/>
+            <Class IRI="#TendencyLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTendencyType"/>
+            <Class IRI="#TendencyType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#doByPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#doneByPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromPlatform"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromPublisher"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fromTime"/>
+            <Class IRI="#Time"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDescription"/>
+            <Class IRI="#Description"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEntity"/>
+            <Class IRI="#Entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasExtra"/>
+            <Class IRI="#Extra"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasLocation"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPredicate"/>
+            <Class IRI="#Predicate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTime"/>
+            <Class IRI="#Time"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccurateLevel"/>
+            <Class IRI="#AccurateLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#locatedIn"/>
+            <Class IRI="#Location"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAccurateLevel"/>
+            <Class IRI="#AccurateLevel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Time"/>
+        <NamedIndividual IRI="#2014年03月08日00时42分"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#上空"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#东方"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#事件"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#今晚"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#北京"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#发布"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#声明"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#失踪"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#安全"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#意外"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#新浪微博"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Predicate"/>
+        <NamedIndividual IRI="#知道"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Extra"/>
+        <NamedIndividual IRI="#附近"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#飞机"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#马航"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fromPlatform"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#新浪微博"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#安全"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDescription"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#意外"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEntity"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#马航"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEntity"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#飞机"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasExtra"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#今晚"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasExtra"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#东方"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasExtra"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#附近"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasExtra"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#上空"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLocation"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#北京"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPredicate"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#发布"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPredicate"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#知道"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTime"/>
+        <NamedIndividual IRI="#马航MH370事件"/>
+        <NamedIndividual IRI="#2014年03月08日00时42分"/>
+    </ObjectPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

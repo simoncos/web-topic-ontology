@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="k:\program files (x86)\microsoft visual studio 11.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="11.0">
+ <Targets>
+  <Target Name="K:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe">
+   <Modules>
+    <Module Name="windowsformsapplication1.exe">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="MySqlHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetDataSet(System.String,System.Data.CommandType,System.String,MySql.Data.MySqlClient.MySqlParameter[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL\SQLHelper" File="MySQLHelper.cs" Line="152">'MySqlHelper.GetDataSet(string, CommandType, string, params MySqlParameter[])' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PrepareCommand(MySql.Data.MySqlClient.MySqlCommand,MySql.Data.MySqlClient.MySqlConnection,MySql.Data.MySqlClient.MySqlTransaction,System.Data.CommandType,System.String,MySql.Data.MySqlClient.MySqlParameter[])" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL\SQLHelper" File="MySQLHelper.cs" Line="254">传递给 'MySqlHelper.PrepareCommand(MySqlCommand, MySqlConnection, MySqlTransaction, CommandType, string, MySqlParameter[])' 中的 'MySqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'cmdText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Book.DAL">
+       <Types>
+        <Type Name="SqlHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateCommand(System.Data.SqlClient.SqlConnection,System.String,System.String[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL\SQLHelper" File="SQLHelper.cs" Line="1668">传递给 'SqlHelper.CreateCommand(SqlConnection, string, params string[])' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'spName'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PrepareCommand(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.Data.CommandType,System.String,System.Data.SqlClient.SqlParameter[],System.Boolean&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL\SQLHelper" File="SQLHelper.cs" Line="141">传递给 'SqlHelper.PrepareCommand(SqlCommand, SqlConnection, SqlTransaction, CommandType, string, SqlParameter[], out bool)' 中的 'SqlCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'commandText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SqlHelperParameterCache" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DiscoverSpParameterSet(System.Data.SqlClient.SqlConnection,System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL\SQLHelper" File="SQLHelper.cs" Line="2119">传递给 'SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection, string, bool)' 中的 'SqlCommand.SqlCommand(string, SqlConnection)' 的查询字符串可能包含以下变量 'spName'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="ontology">
+       <Types>
+        <Type Name="ontologyDataSet_event" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">向类型 'ontologyDataSet_event' 中添加对 GetObjectData 的实现。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ontologyDataSet_event+eventDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">向类型 'ontologyDataSet_event.eventDataTable' 中添加对 GetObjectData 的实现。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ontologyDataSet_ontology" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">向类型 'ontologyDataSet_ontology' 中添加对 GetObjectData 的实现。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ontologyDataSet_ontology+ontologyDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">向类型 'ontologyDataSet_ontology.ontologyDataTable' 中添加对 GetObjectData 的实现。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="ontology.ontoBLL">
+       <Types>
+        <Type Name="OntologyEvolution_BLL" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#calculateDescriptionSimilarity(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="239">'OntologyEvolution_BLL.calculateDescriptionSimilarity(int, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="236">可以在方法 'OntologyEvolution_BLL.calculateDescriptionSimilarity(int, int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 236</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#calculateEntitySimilarity(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="198">'OntologyEvolution_BLL.calculateEntitySimilarity(int, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="195">可以在方法 'OntologyEvolution_BLL.calculateEntitySimilarity(int, int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 195</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#calculateEventWeight(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="76">'OntologyEvolution_BLL.calculateEventWeight(int, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#calculateExtraSimilarity(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="321">'OntologyEvolution_BLL.calculateExtraSimilarity(int, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="318">可以在方法 'OntologyEvolution_BLL.calculateExtraSimilarity(int, int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 318</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#calculateLocationSimilarity(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="157">'OntologyEvolution_BLL.calculateLocationSimilarity(int, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="154">可以在方法 'OntologyEvolution_BLL.calculateLocationSimilarity(int, int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 154</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#calculatePredicateSimilarity(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="280">'OntologyEvolution_BLL.calculatePredicateSimilarity(int, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="277">可以在方法 'OntologyEvolution_BLL.calculatePredicateSimilarity(int, int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 277</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#calculateTimeSimilarity(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="117">'OntologyEvolution_BLL.calculateTimeSimilarity(int, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoBLL" File="OntologyEvolution_BLL.cs" Line="114">可以在方法 'OntologyEvolution_BLL.calculateTimeSimilarity(int, int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 114</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="ontology.ontoDAL">
+       <Types>
+        <Type Name="EventInfo_DAL" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#addDescription(Model.Description,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="296">'EventInfo_DAL.addDescription(Description, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addEntity(Model.Entity,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="256">'EventInfo_DAL.addEntity(Entity, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addEvent(Model.Event)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="98">'EventInfo_DAL.addEvent(Event)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addExtra(Model.Extra,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="372">'EventInfo_DAL.addExtra(Extra, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addLocation(Model.Location,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="217">'EventInfo_DAL.addLocation(Location, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addPredicate(Model.Predicate,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="334">'EventInfo_DAL.addPredicate(Predicate, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addTime(Model.Time,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="177">'EventInfo_DAL.addTime(Time, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectEvent(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="446">'EventInfo_DAL.selectEvent(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectEventDescription(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="617">'EventInfo_DAL.selectEventDescription(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="614">可以在方法 'EventInfo_DAL.selectEventDescription(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 614</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectEventEntity(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="575">'EventInfo_DAL.selectEventEntity(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="572">可以在方法 'EventInfo_DAL.selectEventEntity(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 572</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectEventExtra(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="697">'EventInfo_DAL.selectEventExtra(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="694">可以在方法 'EventInfo_DAL.selectEventExtra(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 694</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectEventLocation(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="534">'EventInfo_DAL.selectEventLocation(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="531">可以在方法 'EventInfo_DAL.selectEventLocation(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 531</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectEventPredicate(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="657">'EventInfo_DAL.selectEventPredicate(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="654">可以在方法 'EventInfo_DAL.selectEventPredicate(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 654</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectEventTime(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="493">'EventInfo_DAL.selectEventTime(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="490">可以在方法 'EventInfo_DAL.selectEventTime(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 490</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#updateEventByID(Model.Event)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="133">'EventInfo_DAL.updateEventByID(Event)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#updateEventCountRatio(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="EventInfo_DAL.cs" Line="405">'EventInfo_DAL.updateEventCountRatio(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OntologyInfo_DAL" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#addOntology(Model.Ontology)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="80">'OntologyInfo_DAL.addOntology(Ontology)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addOntologyDescription(Model.OntologyDescription)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="279">'OntologyInfo_DAL.addOntologyDescription(OntologyDescription)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addOntologyEntity(Model.OntologyEntity)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="241">'OntologyInfo_DAL.addOntologyEntity(OntologyEntity)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addOntologyEvent(Model.OntologyEvent)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="127">'OntologyInfo_DAL.addOntologyEvent(OntologyEvent)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addOntologyExtra(Model.OntologyExtra)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="355">'OntologyInfo_DAL.addOntologyExtra(OntologyExtra)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addOntologyLocation(Model.OntologyLocation)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="203">'OntologyInfo_DAL.addOntologyLocation(OntologyLocation)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addOntologyPredicate(Model.OntologyPredicate)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="317">'OntologyInfo_DAL.addOntologyPredicate(OntologyPredicate)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#addOntologyTime(Model.OntologyTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="165">'OntologyInfo_DAL.addOntologyTime(OntologyTime)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectOntology(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="463">'OntologyInfo_DAL.selectOntology(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectOntologyDescription(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="687">'OntologyInfo_DAL.selectOntologyDescription(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="684">可以在方法 'OntologyInfo_DAL.selectOntologyDescription(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 684</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectOntologyEntity(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="645">'OntologyInfo_DAL.selectOntologyEntity(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="642">可以在方法 'OntologyInfo_DAL.selectOntologyEntity(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 642</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectOntologyEvent(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="517">'OntologyInfo_DAL.selectOntologyEvent(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="514">可以在方法 'OntologyInfo_DAL.selectOntologyEvent(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 514</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectOntologyExtra(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="768">'OntologyInfo_DAL.selectOntologyExtra(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="765">可以在方法 'OntologyInfo_DAL.selectOntologyExtra(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 765</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectOntologyLocation(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="604">'OntologyInfo_DAL.selectOntologyLocation(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="601">可以在方法 'OntologyInfo_DAL.selectOntologyLocation(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 601</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectOntologyPredicate(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="728">'OntologyInfo_DAL.selectOntologyPredicate(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="725">可以在方法 'OntologyInfo_DAL.selectOntologyPredicate(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 725</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#selectOntologyTime(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="563">'OntologyInfo_DAL.selectOntologyTime(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+            <Message TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="560">可以在方法 'OntologyInfo_DAL.selectOntologyTime(int)' 中多次释放对象 'dr'。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 560</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#updateOntologyByEventID(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="424">'OntologyInfo_DAL.updateOntologyByEventID(int, int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#updateOntologyCountRatio(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2014-07-03 05:54:54Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="k:\Users\Lz.Simon\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\ontoDAL" File="OntologyInfo_DAL.cs" Line="388">'OntologyInfo_DAL.updateOntologyCountRatio(int)' 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+   <Name>正确实现 ISerializable</Name>
+   <Description>如果可将类型赋给 ISerializable，则它应实现 GetObjectData。对于非密封类型，其派生类型应可以调用和重写 GetObjectData 方法。</Description>
+   <Resolution Name="Default">向类型 {0} 中添加对 GetObjectData 的实现。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182342(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>再次引发以保留堆栈详细信息</Name>
+   <Description>重复引发捕获的异常时，请使用 IL 再次引发指令保留原始堆栈详细信息。</Description>
+   <Resolution Name="Default">{0} 再次引发捕获的异常并将其显式地指定为一个参数。请改用不带参数的“throw”以保留该异常最初引发时所在的堆栈位置。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="不要多次释放对象" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>不要多次释放对象</Name>
+   <Description>可以多次调用正确实现的 Dispose 方法，而不会引发异常。但是，并不保证所有情况下都会如此。若要避免生成 System.ObjectDisposedException，您不应对一个对象多次调用 Dispose。</Description>
+   <Resolution Name="Default">可以在方法 {1} 中多次释放对象 {0}。若要避免生成 System.ObjectDisposedException，不应对一个对象多次调用 Dispose。: Lines: 765</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>检查 SQL 查询是否存在安全漏洞</Name>
+   <Description>通过用户输入生成的 SQL 命令字符串容易受到 SQL 注入式攻击。Microsoft SQL Server 和其他数据库服务器支持存储过程和参数化 SQL 查询，这将降低受到注入式攻击的风险。</Description>
+   <Resolution Name="WithNonLiterals">传递给 {1} 中的 {0} 的查询字符串可能包含以下变量 {2}。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="11.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+</FxCopReport>

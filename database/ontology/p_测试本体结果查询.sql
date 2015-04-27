@@ -1,0 +1,1 @@
+SELECT * from ontology_predicate WHERE ontologyID=1 ORDER BY countRatio desc;

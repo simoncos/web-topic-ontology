@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food" uri="wine.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1401870681103" name="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28" uri="话题Test.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401870681103" name="duplicate:http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52" uri="initialOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401870681103" name="duplicate:http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52" uri="InternetOpinionTopic.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401870681103" name="duplicate:http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52" uri="InternetOpinionTopic_nonIndividuals.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401870681103" name="duplicate:http://www.semanticweb.org/lz.simon/ontologies/2014/4/untitled-ontology-52" uri="topOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401870681103" name="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#" uri="wine.rdf"/>
+    </group>
+</catalog>

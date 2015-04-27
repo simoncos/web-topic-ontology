@@ -1,0 +1,1 @@
+DELETE from event_ where eventID>=48;

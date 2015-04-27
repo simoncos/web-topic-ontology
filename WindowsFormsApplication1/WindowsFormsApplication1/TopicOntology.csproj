@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7367C8D8-96EF-4D54-A327-FED27870A9DC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ontology</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewEvent.Designer.cs">
+      <DependentUpon>NewEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ontoBLL\TopicInfoManagement_BLL.cs" />
+    <Compile Include="ontoBLL\OntologyEvolution_BLL.cs" />
+    <Compile Include="ontoBLL\TextInfoExtract_BLL.cs" />
+    <Compile Include="ontoDAL\EventInfo_DAL.cs" />
+    <Compile Include="ontoDAL\SQLHelper\MySQLHelper.cs" />
+    <Compile Include="ontoDAL\OntologyInfo_DAL.cs" />
+    <Compile Include="ontologyDataSet_event.cs">
+      <DependentUpon>ontologyDataSet_event.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ontologyDataSet_event.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ontologyDataSet_event.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ontologyDataSet_ontology.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ontologyDataSet_ontology.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OntologyEvolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OntologyEvolution.Designer.cs">
+      <DependentUpon>OntologyEvolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventManagement.Designer.cs">
+      <DependentUpon>EventManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OntologyManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OntologyManagement.Designer.cs">
+      <DependentUpon>OntologyManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemStart.Designer.cs">
+      <DependentUpon>SystemStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ontoModel\BasicInfo.cs" />
+    <Compile Include="ontoModel\EventInfo.cs" />
+    <Compile Include="ontoModel\OntologyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ontoDAL\SQLHelper\SQLHelper.cs" />
+    <EmbeddedResource Include="NewEvent.resx">
+      <DependentUpon>NewEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventManagement.resx">
+      <DependentUpon>EventManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OntologyEvolution.resx">
+      <DependentUpon>OntologyEvolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OntologyManagement.resx">
+      <DependentUpon>OntologyManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemStart.resx">
+      <DependentUpon>SystemStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ontologyDataSet_event.xsc">
+      <DependentUpon>ontologyDataSet_event.xsd</DependentUpon>
+    </None>
+    <None Include="ontologyDataSet_event.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ontologyDataSet_event.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ontologyDataSet_event.xss">
+      <DependentUpon>ontologyDataSet_event.xsd</DependentUpon>
+    </None>
+    <None Include="ontologyDataSet_ontology.xsc">
+      <DependentUpon>ontologyDataSet_ontology.xsd</DependentUpon>
+    </None>
+    <None Include="ontologyDataSet_ontology.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ontologyDataSet_ontology.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ontologyDataSet_ontology.xss">
+      <DependentUpon>ontologyDataSet_ontology.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="马航.txt" />
+    <Content Include="马航1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ontoCOMMON\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

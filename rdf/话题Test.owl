@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#"
+     xml:base="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HappenIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HappenIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasObject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasSubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasSubject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasTendency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasTendency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#LocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#LocatedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Description -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Description">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasObject"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasSubject"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Subject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HappenIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Time"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#HasTendency"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Tendency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#LocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Relation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Relation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Subject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Tendency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Tendency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#Time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#LocatedIn_some_地点 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lz.simon/ontologies/2014/2/untitled-ontology-28#LocatedIn_some_地点"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
