@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0054)http://www.qq.com/coral/coralBeta2/coralMainDom2.0.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>评论组件</title>
+
+<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+
+
+<script type="text/javascript" src="coral_v3.4.2.min.js"></script>
+
+<script type="text/javascript" src="wmx1.5.1.min.js"></script>
+
+<style type="text/css">
+	.wm-box{padding:10px 0;margin:0;}
+	.wm-box .wm-tit{}
+	.wm-box .wm-tit h3{background:url(http://mat1.gtimg.com/www/niuping2013/images/wm_icon.png) no-repeat 0 2px; height:30px; line-height:30px; border-bottom:1px solid #dddddd;}
+	.wm-box .wm-tit h3 strong{ display:none;}
+	.wm-box .wm-tit h3 a.wm-more{float:right; font-weight:normal; color:#888; text-decoration:none; font-size:12px; display:inline-block; padding:0 2px; }
+	.wm-box .wm-tit h3 a:hover{ color:#1A649D; text-decoration:none}	
+	.wm-box .wm-list{background:url(http://mat1.gtimg.com/www/niuping2013/images/wm_icon.png) no-repeat 0 -42px; margin-top:10px;}
+	.wm-box .wm-list li{ height:36px; line-height:36px; padding-left:50px;}
+	.wm-box .wm-list li a, .wm-box .wm-list li a:visited{ font-size:16px; font-weight:bold; color:#1A649D; text-decoration:none}
+	.wm-box .wm-list li a:hover{text-decoration:underline; color:#1A649D}
+	.wm-box .wm-list li .detail{float:right; font-size:12px;}
+	.wm-box .wm-list li .detail span{color:#116bb1; display:inline-block; padding-right:13px;}
+
+</style>
+
+
+<script type="text/javascript">
+	var hd = document.getElementsByTagName('head').item(0);
+	var date = new Date();
+	var myScript= document.createElement("script");
+	myScript.type = "text/javascript";
+	
+	//myScript.src="http://mat1.gtimg.com/www/coral2.0/js/coral_v2.37.js?v" + date.getDate();
+	
+	//mainIframeNew.js  - 本地测试用
+	
+	hd.appendChild(myScript);
+	var myCss= document.createElement("link");
+	myCss.rel="stylesheet";
+	myCss.type='text/css';
+	myCss.media="screen";
+	myCss.href="http://mat1.gtimg.com/www/coral2.0/css/coral_v9.3.css?v" + date.getDate();
+	hd.appendChild(myCss);
+	
+	//http://mat1.gtimg.com/www/coral2.0/js/coral_v2.0.js
+	//http://mat1.gtimg.com/www/coral2.0/css/coral_v2.0.css
+</script><script type="text/javascript"></script><link rel="stylesheet" type="text/css" media="screen" href="coral_v9.3.css">
+
+<!--本地
+
+<link rel="stylesheet" type="text/css" href="npMain.css" media="all" />
+
+-->
+
+<style>
+	
+	#linshi a{font-size:12px;font-weight:normal;color:#666;margin-top:5px}
+	#linshi a:hover{text-decoration:none}
+	#linshi:hover{border:None}
+	#linshi{margin-right:0px}
+</style>
+</head>
+
+<body>
+
+
+<div id="mainBody" class="np-frame" style="padding-bottom: 0px; width: 100%;">
+	
+					<!----评论框---->	
+					
+					<div id="top_reply">
+					
+						<h1 class="np-title"><a href="http://coral.qq.com/1005463461" id="commentTotleNum" target="_blank" hidefocus="true"><span>1251条评论</span></a><strong>网友评论</strong></h1>
+						
+						<div id="commentArea" class="out">
+
+							<div class="np-reply-box blueLight np-reply-box-active" id="np-reply-box" style="height:120px">
+						
+											<div class="np-reply-box-content textarea">
+												<textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="top_textarea" style="width: 604px; height: 60px; padding: 10px;"></textarea>   
+											</div> 
+                                            
+    
+											<div class="commtSub np-reply-box-footer" style="position:relative;display:block;height:40px" id="p_login_btn">  <!-- 用户登录模块 -->
+												
+												<div class="np-login" id="loginFlag" style="display: block;">    
+												
+													<img width="35" height="35" class="np-avatar" src="g">
+													<span class="np-user">SimonC</span>
+													<a href="javascript:void(0)" class="np-btn change" hidefocus="true">切换帐户</a>
+												
+												</div>
+											
+												<div class="submitBtn">
+												
+													<a href="javascript:void(0)" class="np-btn np-btn-submit" id="top_post_btn" hidefocus="true">发表评论</a>
+													<span class="np-tip-error" style="display:none"></span>
+											   
+												</div>
+											   
+											</div>
+											
+							</div>				
+
+						</div>
+						
+					</div>
+					
+				
+					<!----评论显示列表---->	
+						
+					<div id="content" style="display: none;">
+                        <ul class="np-nav-tab">
+                            <li id="myAllComment" class="np-active">全部评论</li>
+                            <li id="myCowComment">我的牛评<span id="popMsg" class="np-tip-num" style="display: none;"></span></li><!--<li id="linshi" style="float:right"><a href ='http://sports.qq.com/coral/feedback.htm' target='_blank'>帮忙改进评论体验</a></li>-->
+                        </ul>
+							
+						<div id="tab1_allComments">	 <!--页卡一 全部评论-->
+
+<div id="order" class="np-order np-btngroup"><a data-sort="time" href="javascript:void(0)" class="np-active" hidefocus="true">时间</a><a data-sort="quality" href="javascript:void(0)" hidefocus="true">热度</a></div>
+<!--推荐评论-->
+
+							
+							<div id="showNum" class="showNum">
+								
+										<span></span>
+								
+							</div>
+							
+							<div id="allComments">
+
+                                    <ul class="post-list np-comment-list"><li class="np-title-hot">热门评论</li><li class="np-post   topAll  " id="top_5848557414531011288"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="24219435" src="g(1)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848557414531011288">举报</a><a href="javascript:void(0)" title="玉洁冰清" class="np-user popClick " post_uid="24219435">玉洁冰清</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394404748">2014-3-10</span></div><div class="np-post-content"><p>如果真的这样，那时空隧道或者时空错位的可能性就比较大了，对他们来说很可能还在认为正常飞行，飞机不让接打电话，能挂qq说明物理位置在地球，时空紊乱了。<a class="np-postlink" targetid="1005463461" commentid="5848557414531011288" parentid="0" href="javascript:void(0)"><img src="transparent.gif"></a></p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848557414531011288">(<em>1033</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>52</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll  " id="top_5848545946012027004"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="16033821" src="g(2)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848545946012027004">举报</a><a href="javascript:void(0)" title="秋风有意" class="np-user popClick " post_uid="16033821">秋风有意</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394402014">2014-3-10</span></div><div class="np-post-content"><p>跟腾讯公司联系一下了吗，查查是否qq真正曾经登陆过?在哪里登陆过?<a class="np-postlink" targetid="1005463461" commentid="5848545946012027004" parentid="0" href="javascript:void(0)"><img src="transparent.gif"></a></p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848545946012027004">(<em>739</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>7</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll  " id="top_5848813334800439524"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="23161570" src="g(3)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848813334800439524">举报</a><a href="javascript:void(0)" title="贵合房地产" class="np-user popClick " post_uid="23161570">贵合房地产</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394465764">2014-3-10</span></div><div class="np-post-content"><p>03-10 22:22
+[直播员]腾讯新闻: 【事发回顾：渔民称失联前曾看到客机低飞】这位渔民说，就在MH370客机失联前，他看到一架飞机，以低于一般飞机的飞行高度飞行；而在得知MH370客机失联的消息后，他立即向警方报告，提供了他所看到的飞机的飞行方向，希望对找到MH370客机有所帮助。 分享视频：【点击查看视频】<br>如果此报道属实，则有可能是人为控制飞机低空飞行躲避雷达探测，飞机上人员的手机处于开机状态，则说明飞机未入海，很有可能已着陆（飞机上的燃油只能飞行7小时左右）。应该沿着这个思路向陆地搜寻才有可能找到吧？真希望飞机上的人都安好。<a class="np-postlink" targetid="1005463461" commentid="5848813334800439524" parentid="0" href="javascript:void(0)"><img src="transparent.gif"></a></p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848813334800439524">(<em>17</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>1</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll topno " id="top_5848824218591494913"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="35083441" src="g(4)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848824218591494913">举报</a><a href="javascript:void(0)" title="冰山" class="np-user popClick " post_uid="35083441">冰山</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394468359">2014-3-11</span></div><div class="np-post-content"><p>也许是飞机被袭击，然后人质被劫持，这个手机被暴徒拿了，也许这个暴徒良心发现想帮这些被劫持的人，这样可以手机定位的！</p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848824218591494913">(<em>7</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>0</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll topno " id="top_5848950285453038631"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="22771725" src="g(5)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848950285453038631">举报</a><a href="javascript:void(0)" title="梦泽夏缘" class="np-user popClick " post_uid="22771725">梦泽夏缘</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394498416">2014-3-11</span></div><div class="np-post-content"><p>借用网友的一句话：今年流行去哪了：爸爸去哪了？时间去哪了？这飞机去哪了呢？真是个迷啊？只能保佑平安回家。</p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848950285453038631">(<em>6</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>0</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll topno " id="top_5848843745698070827"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="26501122" src="g(6)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848843745698070827">举报</a><a href="javascript:void(0)" title="西伯利亚狼" class="np-user popClick " post_uid="26501122">西伯利亚狼</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394473015">2014-3-11</span></div><div class="np-post-content"><p>为什么找不见马航失联飞机,家属给亲人打电话为什么能打通,QQ也能登录；这是为什么?马航飞机起飞了吗?</p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848843745698070827">(<em>4</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>0</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll topno " id="top_5848729450276540693"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="15907556" src="g(7)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848729450276540693">举报</a><a href="javascript:void(0)" title="&#9756; 神话 &#9758;" class="np-user popClick " post_uid="15907556">&#9756; 神话 &#9758;</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394445765">2014-3-10</span></div><div class="np-post-content"><p>我想飞机可能进入了【虫洞】，我们苦等了好几天，飞机可能也就飞了几分钟。古人所谓的【洞中方数日，世上已千年】也就这道理吧。</p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848729450276540693">(<em>12</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>0</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll topno " id="top_5848954652684005450"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="34497690" src="g(8)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848954652684005450">举报</a><a href="javascript:void(0)" title="东莞晶钢门业" class="np-user popClick " post_uid="34497690">东莞晶钢门业</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394499457">2014-3-11</span></div><div class="np-post-content"><p>从昨天到今天让手机定个位有那么难吗？到置今都还没公报手机位置在那、、、、、希望他（她）们没事、、、、快回家吧！你们的家人等着与你团员、、、、、</p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848954652684005450">(<em>2</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>0</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll topno " id="top_5848982347203555848"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="15174404" src="g(9)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848982347203555848">举报</a><a href="javascript:void(0)" title="海洋孤岛" class="np-user popClick " post_uid="15174404">海洋孤岛</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394506060">2014-3-11</span></div><div class="np-post-content"><p>什么啊，飞机直接进海里了，什么大海捞针，飞机的路线，从起飞到失去联系几个小时，沿着路线找，几个小时飞到哪，应该很清楚吧，也不是飞了一次</p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848982347203555848">(<em>2</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>0</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-post   topAll topno  noborder" id="top_5848919182084223161"><div class="np-tip-newpost"></div><img class="np-avatar popClick" post_uid="12914314" src="g(10)" alt="头像"><div class="np-post-body"><div class="np-post-header"><a href="javascript:void(0)" class="np-btn np-btn-report report" id="report_top_5848919182084223161">举报</a><a href="javascript:void(0)" title="︶ㄣ局之终" class="np-user popClick " post_uid="12914314">︶ㄣ局之终</a><a href="javascript:void(0)" class="replywho np-icon-reply-weak np-user" style="display:none"></a><span class="np-time" data="1394491000">2014-3-11</span></div><div class="np-post-content"><p>各个国家多都太次（不专业） 了，连给飞机都找不到，，什么高科技，全垃圾，，或者他们真的穿越了，期待奇迹吧，至少我相信</p></div><div class="np-post-footer"><a href="javascript:void(0)" class="np-btn np-btn-upvote upvote" id="upvote_5848919182084223161">(<em>3</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-reply reply">回复(<em>0</em>)</a><a href="javascript:void(0)" class="np-btn np-btn-newreply"></a></div></div><ul class="children"></ul></li><li class="np-title-new">最新评论</li></ul>
+									<div class="tipInfo waitting"></div> <!--loadding图标-->
+							
+							</div>     <!-- 全部评论 -->
+							
+							
+							<div id="loadMore" class="np-load-more">
+
+								<span>加载更多</span>
+								<em style="display:none">没有更多了</em>
+
+							</div>
+
+						</div>
+
+						<div id="tab2_myComments" class=" my-comments" style="display:none">  <!--页卡二 我的牛评-->
+						<div class="np-btngroup np-btngroup-notice"><a href="javascript:void(0)" id="mytips" class="np-active" hidefocus="true">提醒</a><a id="mycon" href="javascript:void(0)" hidefocus="true">评论</a></div>
+
+							 <div id="tab3_tips" class="dis">
+							 
+									  <div id="my-message" class="my-message">
+									  
+										<div class="tipInfo waitting">
+										
+										</div>
+									  
+										
+										<ul id="my-message-list" class="post-list np-notice-list"></ul>
+										
+										<div class="np-load-more" id="loadMsgMore" style="display:none"> 
+											<span>加载更多</span>
+								<em style="display:none">没有更多了</em>
+										</div>
+									  </div>
+						 
+
+							 
+							 </div>
+							 
+							  <div id="tab4_mycon" style="display:none" class="undis">
+                              		
+
+										 <div id="my-notification" class="my-notification ">
+										 
+											<div class="tipInfo waitting">
+
+											</div>
+											<div class="np-person-info np-person-info-weak" id="myuserInfo" style="display:none">
+												<img class="np-avatar" src="">       
+												<span class="np-user">企鹅先生</span>                                       
+												<div>
+													<span class="np-btn-area"><em class="a">中国 北京 海淀</em></span>
+													<span class="np-btn-upvote"><em class="b">0</em></span>
+													<span class="np-btn-reply"><em class="c">1</em></span>
+												</div>
+										    </div>
+											<ul id="my-notification-list" class="post-list np-timeline"></ul>
+											
+											
+											<div class="np-load-more" id="loadCmtMore" style="display: none;"> 
+											
+													<span>加载更多</span>
+								<em style="display:none">没有更多了</em>
+												
+											</div>
+											
+											
+										  </div>
+
+							 </div>
+
+						</div>
+
+					</div>
+					
+					<div id="hiddenCon" class="hiddenCon" style="display:none"> 
+					
+					
+					</div>
+					
+					<!--弹出举报框-->
+					
+					
+					<div class="np-report" id="public_report" style="display:none">
+                        	<div class="np-report-header">
+                            	<h4>举报</h4>
+                                <a href="javascript:void(0)" class="close" hidefocus="true"></a>
+                            </div>
+                            <div class="np-report-content">
+                            	<h5><img src="transparent(1).gif">您为什么要举报此信息?</h5>
+                                <ul>
+                                    <li><input name="impeach_content" id="content1" type="radio" value="1"><label for="content1">色情淫秽</label></li>
+                                    
+									<li><input name="impeach_content" id="content4" type="radio" value="8"><label for="content4">骚扰谩骂</label></li>
+                                    
+									<li><input name="impeach_content" id="content1024" type="radio" value="1024"><label for="content1024">广告欺诈</label></li>
+                                    
+									<li><input name="impeach_content" id="content16384" type="radio" value="2048"><label for="content16384">反动</label></li>
+                                    <li><input name="impeach_content" id="content0" type="radio" value="0"><label for="content0">其他</label></li>
+                                </ul>
+                                <div>
+                                	<h6>举报说明（可选）：</h6>
+                                	<input name="impeach_desc" value="描述恶意行为" style=" color:#bbb;" id="impeach_desc" type="text" maxlength="200/">
+                                </div>
+                            </div>
+                            <div class="np-report-footer">
+                                <a class="np-btn np-report-submit" href="javascript:void(0)" hidefocus="true">提交</a>
+                                <a class="np-btn np-report-cancel" href="javascript:void(0)" hidefocus="true">取消</a>
+                            </div>
+                    </div>
+					
+					
+					
+
+					<!--弹出评论框-->
+	
+					<div class="pop_reply np-reply-box np-reply-box-inline" id="public_reply" style="display:none">
+							
+											<div class="textarea np-reply-box-content">
+												<textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="top_textarea"></textarea>   
+											</div>        
+											<div class="commtSub" id="p_login_btn">
+											
+												
+												
+												<div class="np-reply-box-footer">
+												
+													  <div class="np-reply-box-info">
+											
+													            <span class="tips"></span>
+													
+													</div>
+												
+													  <a href="javascript:void(0)" class="submit np-btn np-btn-submit" id="pop_post_btn" hidefocus="true">回复</a>
+													  
+												</div> 
+											   
+											</div>
+					
+					
+					</div>
+	
+		</div>
+
+<!--遮罩层-->
+<div class="maskObj" id="maskObj">
+</div>
+	
+	
+		
+
+
+
+<!--[if !IE]>|xGv00|cf879ca48f4a23fe6798d74d2a0b4e79<![endif]--></body></html>

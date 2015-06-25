@@ -1,0 +1,43 @@
+/* author:shenshenyan 2014-02-25 14:01*/
+@charset "utf-8";
+.hd h2,.hd h3{float:none;display:block;}
+a{color:#333; }
+.wdwrap a:hover{color:#c00; }
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,button{margin:0;padding:0}  
+body{background:#fff;color:#333; }  
+a{text-decoration:none;color:#5d5d5d ;}
+a:hover{text-decoration:underline;color:#c00; }
+em{font-style:normal}  
+li{list-style:none}
+img{border:0;vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0}
+button, input, select, textarea{cursor:pointer; }
+p{word-wrap:break-word}
+.cf:after{content:"";display:table;clear:both}  
+.cf{*zoom:1}
+h1,h2,h3{font-weight:100;}
+body{background:url(http://mat1.gtimg.com/news/2014fly/wrapBg.png) repeat ; }
+.header .timeBox b,.shareBnt a,.shareBnt .phone .col{background:url(http://mat1.gtimg.com/news/2014fly/colBnt.png) no-repeat ; }
+.header{margin-bottom:50px;position:relative; z-index:10000}
+.header .bd{position:relative; width:1000px;margin:0 auto;height:136px;background:url(http://mat1.gtimg.com/news/2014fly/banner.png) no-repeat ;    }
+.header h1{height:30px;text-indent:-999em;overflow:hidden;  }
+.header .timeBox{position:absolute;top:92px;left:157px}
+.header .timeBox p{height:32px;padding:0 20px 0 5px; font:bold normal 22px/32px "Î¢ÈíÑÅºÚ";color:#3b3b3b;   }
+.header .timeBox b{width:52px;height:42px;line-height:42px;color:#fff;display:inline-block;*display:inline;zoom:1;vertical-align:middle;background-position:0 -108px ;font:normal normal 24px/42px "Arial";letter-spacing:17px;padding-left:8px;white-space:nowrap;margin:0 5px 0 10px;}
+.header .timeBox b.sou{width:52px;overflow:hidden; }
+.shareBnt{position:absolute;width:271px;height:63px;top:30px;right:0}
+.shareBnt a{float:left; display:inline; width:44px;height:44px;margin-left:10px;position:relative; zoom:1 }
+.shareBnt .pl a{background-position:-1px -55px ;}
+.shareBnt .tcwb a{background-position:-55px -55px ;}
+.shareBnt .qzone a{background-position:-109px -55px ;}
+.shareBnt .pengyou a{background-position:-163px -55px ;}
+.shareBnt .phone a{background-position:-217px -55px ;}
+.shareBnt .phone a #imgewm{position:absolute;width:100px;height:125px;padding:7px;border:1px solid #d9d9d9; top:55px;left:-34px;text-align:center;line-height:22px;font-size:12px;zoom:1;color:#666;display:none;background:#fff;  }
+.shareBnt .phone a #imgewm b{display:block;margin-bottom:5px;}
+.shareBnt .phone .col{width:17px;height:11px;position:absolute;top:-11px;left:46px;background-position:-78px -108px ;  }
+.shareBnt .phone a:hover #imgewm,.shareBnt .phone a:hover .col{display:block;}
+#timeline-embed{*text-align:center; *font:normal normal 16px/40px "Î¢ÈíÑÅºÚ";*background:#fff; }
+.shareBnt .phone a:hover{text-decoration:none; }
+.phone{
+    display: none;
+}/*  |xGv00|1ff1593dad9d68bd75f20c6025e9b269 */

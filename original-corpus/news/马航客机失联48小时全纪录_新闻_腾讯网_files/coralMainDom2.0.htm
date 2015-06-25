@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0054)http://www.qq.com/coral/coralBeta2/coralMainDom2.0.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>评论组件</title>
+
+<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+
+
+<script type="text/javascript" src="coral_v3.4.2.min.js"></script>
+
+<script type="text/javascript" src="wmx1.5.1.min.js"></script>
+
+<style type="text/css">
+	.wm-box{padding:10px 0;margin:0;}
+	.wm-box .wm-tit{}
+	.wm-box .wm-tit h3{background:url(http://mat1.gtimg.com/www/niuping2013/images/wm_icon.png) no-repeat 0 2px; height:30px; line-height:30px; border-bottom:1px solid #dddddd;}
+	.wm-box .wm-tit h3 strong{ display:none;}
+	.wm-box .wm-tit h3 a.wm-more{float:right; font-weight:normal; color:#888; text-decoration:none; font-size:12px; display:inline-block; padding:0 2px; }
+	.wm-box .wm-tit h3 a:hover{ color:#1A649D; text-decoration:none}	
+	.wm-box .wm-list{background:url(http://mat1.gtimg.com/www/niuping2013/images/wm_icon.png) no-repeat 0 -42px; margin-top:10px;}
+	.wm-box .wm-list li{ height:36px; line-height:36px; padding-left:50px;}
+	.wm-box .wm-list li a, .wm-box .wm-list li a:visited{ font-size:16px; font-weight:bold; color:#1A649D; text-decoration:none}
+	.wm-box .wm-list li a:hover{text-decoration:underline; color:#1A649D}
+	.wm-box .wm-list li .detail{float:right; font-size:12px;}
+	.wm-box .wm-list li .detail span{color:#116bb1; display:inline-block; padding-right:13px;}
+
+</style>
+
+
+<script type="text/javascript">
+	var hd = document.getElementsByTagName('head').item(0);
+	var date = new Date();
+	var myScript= document.createElement("script");
+	myScript.type = "text/javascript";
+	
+	//myScript.src="http://mat1.gtimg.com/www/coral2.0/js/coral_v2.37.js?v" + date.getDate();
+	
+	//mainIframeNew.js  - 本地测试用
+	
+	hd.appendChild(myScript);
+	var myCss= document.createElement("link");
+	myCss.rel="stylesheet";
+	myCss.type='text/css';
+	myCss.media="screen";
+	myCss.href="http://mat1.gtimg.com/www/coral2.0/css/coral_v9.3.css?v" + date.getDate();
+	hd.appendChild(myCss);
+	
+	//http://mat1.gtimg.com/www/coral2.0/js/coral_v2.0.js
+	//http://mat1.gtimg.com/www/coral2.0/css/coral_v2.0.css
+</script><script type="text/javascript"></script><link rel="stylesheet" type="text/css" media="screen" href="coral_v9.3.css">
+
+<!--本地
+
+<link rel="stylesheet" type="text/css" href="npMain.css" media="all" />
+
+-->
+
+<style>
+	
+	#linshi a{font-size:12px;font-weight:normal;color:#666;margin-top:5px}
+	#linshi a:hover{text-decoration:none}
+	#linshi:hover{border:None}
+	#linshi{margin-right:0px}
+</style>
+</head>
+
+<body>
+
+
+<div id="mainBody" class="np-frame" style="padding-bottom: 0px; width: 100%;">
+	
+					<!----评论框---->	
+					
+					<div id="top_reply">
+					
+						<h1 class="np-title"><a href="http://coral.qq.com/1005463356" id="commentTotleNum" target="_blank" hidefocus="true"><span>9条评论</span></a><strong>网友评论</strong></h1>
+						
+						<div id="commentArea" class="out">
+
+							<div class="np-reply-box blueLight np-reply-box-active" id="np-reply-box" style="height:120px">
+						
+											<div class="np-reply-box-content textarea">
+												<textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="top_textarea" style="width: 618px; height: 60px; padding: 10px;"></textarea>   
+											</div> 
+                                            
+    
+											<div class="commtSub np-reply-box-footer" style="position:relative;display:block;height:40px" id="p_login_btn">  <!-- 用户登录模块 -->
+												
+												<div class="np-login" id="loginFlag" style="display: block;">    
+												
+													<img width="35" height="35" class="np-avatar" src="g">
+													<span class="np-user">SimonC</span>
+													<a href="javascript:void(0)" class="np-btn change" hidefocus="true">切换帐户</a>
+												
+												</div>
+											
+												<div class="submitBtn">
+												
+													<a href="javascript:void(0)" class="np-btn np-btn-submit" id="top_post_btn" hidefocus="true">发表评论</a>
+													<span class="np-tip-error" style="display:none"></span>
+											   
+												</div>
+											   
+											</div>
+											
+							</div>				
+
+						</div>
+						
+					</div>
+					
+				
+					<!----评论显示列表---->	
+						
+					<div id="content" style="display: none;">
+                        <ul class="np-nav-tab">
+                            <li id="myAllComment" class="np-active">全部评论</li>
+                            <li id="myCowComment">我的牛评<span id="popMsg" class="np-tip-num"></span></li><!--<li id="linshi" style="float:right"><a href ='http://sports.qq.com/coral/feedback.htm' target='_blank'>帮忙改进评论体验</a></li>-->
+                        </ul>
+							
+						<div id="tab1_allComments">	 <!--页卡一 全部评论-->
+
+<div id="order" class="np-order np-btngroup"><a data-sort="time" href="javascript:void(0)" class="np-active" hidefocus="true">时间</a><a data-sort="quality" href="javascript:void(0)" hidefocus="true">热度</a></div>
+<!--推荐评论-->
+
+							
+							<div id="showNum" class="showNum">
+								
+										<span></span>
+								
+							</div>
+							
+							<div id="allComments">
+
+                                    <ul class="post-list np-comment-list"></ul>
+									<div class="tipInfo waitting"></div> <!--loadding图标-->
+							
+							</div>     <!-- 全部评论 -->
+							
+							
+							<div id="loadMore" class="np-load-more">
+
+								<span>加载更多</span>
+								<em style="display:none">没有更多了</em>
+
+							</div>
+
+						</div>
+
+						<div id="tab2_myComments" class=" my-comments" style="display:none">  <!--页卡二 我的牛评-->
+						<div class="np-btngroup np-btngroup-notice"><a href="javascript:void(0)" id="mytips" class="np-active" hidefocus="true">提醒</a><a id="mycon" href="javascript:void(0)" hidefocus="true">评论</a></div>
+
+							 <div id="tab3_tips" class="dis">
+							 
+									  <div id="my-message" class="my-message">
+									  
+										<div class="tipInfo waitting">
+										
+										</div>
+									  
+										
+										<ul id="my-message-list" class="post-list np-notice-list"></ul>
+										
+										<div class="np-load-more" id="loadMsgMore" style="display:none"> 
+											<span>加载更多</span>
+								<em style="display:none">没有更多了</em>
+										</div>
+									  </div>
+						 
+
+							 
+							 </div>
+							 
+							  <div id="tab4_mycon" style="display:none" class="undis">
+                              		
+
+										 <div id="my-notification" class="my-notification ">
+										 
+											<div class="tipInfo waitting">
+
+											</div>
+											<div class="np-person-info np-person-info-weak" id="myuserInfo" style="display:none">
+												<img class="np-avatar" src="">       
+												<span class="np-user">企鹅先生</span>                                       
+												<div>
+													<span class="np-btn-area"><em class="a">中国 北京 海淀</em></span>
+													<span class="np-btn-upvote"><em class="b">0</em></span>
+													<span class="np-btn-reply"><em class="c">1</em></span>
+												</div>
+										    </div>
+											<ul id="my-notification-list" class="post-list np-timeline"></ul>
+											
+											
+											<div class="np-load-more" id="loadCmtMore" style="display: none;"> 
+											
+													<span>加载更多</span>
+								<em style="display:none">没有更多了</em>
+												
+											</div>
+											
+											
+										  </div>
+
+							 </div>
+
+						</div>
+
+					</div>
+					
+					<div id="hiddenCon" class="hiddenCon" style="display:none"> 
+					
+					
+					</div>
+					
+					<!--弹出举报框-->
+					
+					
+					<div class="np-report" id="public_report" style="display:none">
+                        	<div class="np-report-header">
+                            	<h4>举报</h4>
+                                <a href="javascript:void(0)" class="close" hidefocus="true"></a>
+                            </div>
+                            <div class="np-report-content">
+                            	<h5><img src="transparent.gif">您为什么要举报此信息?</h5>
+                                <ul>
+                                    <li><input name="impeach_content" id="content1" type="radio" value="1"><label for="content1">色情淫秽</label></li>
+                                    
+									<li><input name="impeach_content" id="content4" type="radio" value="8"><label for="content4">骚扰谩骂</label></li>
+                                    
+									<li><input name="impeach_content" id="content1024" type="radio" value="1024"><label for="content1024">广告欺诈</label></li>
+                                    
+									<li><input name="impeach_content" id="content16384" type="radio" value="2048"><label for="content16384">反动</label></li>
+                                    <li><input name="impeach_content" id="content0" type="radio" value="0"><label for="content0">其他</label></li>
+                                </ul>
+                                <div>
+                                	<h6>举报说明（可选）：</h6>
+                                	<input name="impeach_desc" value="描述恶意行为" style=" color:#bbb;" id="impeach_desc" type="text" maxlength="200/">
+                                </div>
+                            </div>
+                            <div class="np-report-footer">
+                                <a class="np-btn np-report-submit" href="javascript:void(0)" hidefocus="true">提交</a>
+                                <a class="np-btn np-report-cancel" href="javascript:void(0)" hidefocus="true">取消</a>
+                            </div>
+                    </div>
+					
+					
+					
+
+					<!--弹出评论框-->
+	
+					<div class="pop_reply np-reply-box np-reply-box-inline" id="public_reply" style="display:none">
+							
+											<div class="textarea np-reply-box-content">
+												<textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="top_textarea"></textarea>   
+											</div>        
+											<div class="commtSub" id="p_login_btn">
+											
+												
+												
+												<div class="np-reply-box-footer">
+												
+													  <div class="np-reply-box-info">
+											
+													            <span class="tips"></span>
+													
+													</div>
+												
+													  <a href="javascript:void(0)" class="submit np-btn np-btn-submit" id="pop_post_btn" hidefocus="true">回复</a>
+													  
+												</div> 
+											   
+											</div>
+					
+					
+					</div>
+	
+		</div>
+
+<!--遮罩层-->
+<div class="maskObj" id="maskObj">
+</div>
+	
+	
+		
+
+
+
+<!--[if !IE]>|xGv00|cf879ca48f4a23fe6798d74d2a0b4e79<![endif]--></body></html>

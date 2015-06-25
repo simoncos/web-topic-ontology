@@ -1,0 +1,56 @@
+*{margin:0;padding:0}
+body{font:12px '\5B8B\4F53'}
+img{border:none;}
+.wrap50{width:50px}
+.wrap50 .icon_ok,.wrap50 .icon_both{position:relative;top:2px;margin-right:1px;left:0}
+.wrap{overflow:hidden}
+.wrap .list_user{float:left}
+.wrap .list_user li{margin-right:35px}
+.usre_list_a_wrap{display:inline-block;width:54px;height:54px;}
+.btn_group{position:relative;height:28px}
+.btn_follow_center{position:absolute;top:0;left:50%;margin-left:-65px}
+.btn{display:inline-block;cursor:pointer}
+.btn_follow_small{width:50px;height:20px}
+.btn_follow_small2{width:47px;height:20px}
+.btn_follow_large1{width:84px;height:28px}
+.btn_follow_large2{width:85px;height:26px}
+.btn_follow_large3{width:83px;height:24px}
+.btn_follow_s1{background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:0 -29px}
+.btn_follow_s2{background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-51px -29px}
+.btn_follow_s3{background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-102px -29px}
+.btn_follow_s8{background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:0 0}
+.btn_follow_s9{background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-85px 0;cursor:default;}
+.btn_follow_s10{background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-170px 0}
+.btn_follow_s12{background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-150px -29px}
+.btn_follow_s13{background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-198px -27px}
+.icon{display:inline-block}
+.icon_ok1{height:18px;width:18px;background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-246px -27px}
+.icon_ok2{height:18px;width:18px;background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-256px 0}
+.icon_ok{width:13px;height:11px;background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-275px 0}
+.icon_both{width:13px;height:11px;background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-275px -17px}
+.icon_orange{height:14px;width:14px;background-image:url(http://mat1.gtimg.com/app/vt/images/follow/quickfollow_qq.png);background-position:-275px -34px;margin-left:4px}
+.avatar{display:block;cursor:pointer;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
+.avatar_small{height:50px;width:50px}
+.status{color:#777}
+.mt9{margin-top:9px}
+.mt20{margin-top:20px}
+.mt5{margin-top:5px}
+.mt4{margin-top:4px}
+.ml6{margin-left:6px}
+.center{text-align:center}
+.clear{clear:both}
+.username{display:block;width:100%;text-align:center;color:#666;text-decoration:none;height:16px;line-height:16px;width:69px;overflow:hidden}
+.username:hover{text-decoration:underline}
+.list{list-style:none;margin:0;padding:0}
+.list_user li{float:left;display:inline;position:relative;padding-top:7px}
+.list_user li .icon_ok1,.list_user li .icon_ok2{position:absolute;top:0;right:5px;display: none;}
+.list_user .avatar_wrap{height:50px;width:50px;padding:2px;cursor:pointer;}
+.usre_list_a_wrap .avatar_hover,.list_user .avatar_selected{border:solid 2px #2aabdf;padding:0;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
+.list_user .icon_ok1{display:none}
+.list_user .avatar_selected .icon_ok1{display:inline-block;}
+.list_user .avatar_wrap .icon_ok2{display:none;}
+.list_user .icon_orange{position:relative;top:2px}
+.list_user .usre_list_a_wrap .avatar_hover .icon_ok2{display:inline-block}
+.hide{display:none}
+#CssGaga{content:"131217204037,Adr,300"}
+/*  |xGv00|5a0553ea08fa86d66ac759855bb91d33 */
